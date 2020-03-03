@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prog" translatesAutoresizingMaskIntoConstraints="NO" id="iOk-qv-v51">
+                                <rect key="frame" x="57" y="144" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="FHT-VQ-ngX"/>
+                                    <constraint firstAttribute="width" constant="300" id="dWr-uZ-NAA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZZ-rB-BQW">
+                                <rect key="frame" x="57" y="662" width="300" height="100"/>
+                                <color key="backgroundColor" red="0.31951515759999999" green="0.76238665800000005" blue="0.38992848009999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="cxd-4t-vjz"/>
+                                    <constraint firstAttribute="height" constant="100" id="oiL-MV-4Ln"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                <state key="normal" title="Tap Me!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="24o-dq-7ma" kind="show" id="0as-jB-itR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6133865643305908" green="1" blue="0.66572800433017221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GZZ-rB-BQW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Emw-dQ-FHX"/>
+                            <constraint firstItem="iOk-qv-v51" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UbI-Vd-clf"/>
+                            <constraint firstItem="iOk-qv-v51" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="UgL-MM-eOh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GZZ-rB-BQW" secondAttribute="bottom" constant="100" id="mX7-OK-O4b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonTapMe" destination="GZZ-rB-BQW" id="1HL-Zi-5CS"/>
+                        <outlet property="imageView" destination="iOk-qv-v51" id="3ac-pO-xbG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="116"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="i0F-ia-vQL">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="24o-dq-7ma" customClass="SecondViewController" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JXX-cL-dkq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cup" translatesAutoresizingMaskIntoConstraints="NO" id="lZO-Hh-AeB">
+                                <rect key="frame" x="57" y="144" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Zhc-7Y-sbB"/>
+                                    <constraint firstAttribute="height" constant="300" id="dfK-yU-3Ge"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgk-eW-kBt">
+                                <rect key="frame" x="57" y="662" width="300" height="100"/>
+                                <color key="backgroundColor" red="0.31951515759999999" green="0.76238665800000005" blue="0.38992848009999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gn6-HH-TLt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="lPi-tv-hsm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                <state key="normal" title="Take the cup">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTakeTheCupPressed:" destination="24o-dq-7ma" eventType="touchUpInside" id="UVu-kG-RFs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61338656430000005" green="1" blue="0.66572800430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lZO-Hh-AeB" firstAttribute="top" secondItem="Uu5-Zj-iS9" secondAttribute="top" constant="100" id="a5n-YE-G4X"/>
+                            <constraint firstItem="Uu5-Zj-iS9" firstAttribute="bottom" secondItem="hgk-eW-kBt" secondAttribute="bottom" constant="100" id="atV-rw-6nO"/>
+                            <constraint firstItem="lZO-Hh-AeB" firstAttribute="centerX" secondItem="JXX-cL-dkq" secondAttribute="centerX" id="eUC-rK-aTL"/>
+                            <constraint firstItem="hgk-eW-kBt" firstAttribute="centerX" secondItem="JXX-cL-dkq" secondAttribute="centerX" id="g7h-YY-CZg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uu5-Zj-iS9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y0C-0h-rkK"/>
+                    <connections>
+                        <outlet property="buttonTakeTheCup" destination="hgk-eW-kBt" id="x2z-MV-b1t"/>
+                        <outlet property="imageView" destination="lZO-Hh-AeB" id="btz-RF-rIQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lE2-1w-L9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cup" width="200" height="200"/>
+        <image name="prog" width="200" height="200"/>
+    </resources>
+</document>
