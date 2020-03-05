@@ -37,6 +37,9 @@ class SecondViewController: UIViewController {
             imageView.layer.shadowRadius = 10
             imageView.layer.shadowColor = UIColor.white.cgColor
             imageView.layer.cornerRadius = 50
+            let borderColor = UIColor.white
+            imageView.layer.borderColor = borderColor.cgColor
+            imageView.layer.borderWidth = 5
         }
     }
     

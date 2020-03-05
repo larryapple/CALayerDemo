@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prog" translatesAutoresizingMaskIntoConstraints="NO" id="iOk-qv-v51">
-                                <rect key="frame" x="57" y="144" width="300" height="300"/>
+                                <rect key="frame" x="57" y="94" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="FHT-VQ-ngX"/>
                                     <constraint firstAttribute="width" constant="300" id="dWr-uZ-NAA"/>
@@ -34,7 +34,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="24o-dq-7ma" kind="show" id="0as-jB-itR"/>
+                                    <action selector="buttonTapMeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2T8-tP-Ngl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -42,7 +42,7 @@
                         <constraints>
                             <constraint firstItem="GZZ-rB-BQW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Emw-dQ-FHX"/>
                             <constraint firstItem="iOk-qv-v51" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UbI-Vd-clf"/>
-                            <constraint firstItem="iOk-qv-v51" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="UgL-MM-eOh"/>
+                            <constraint firstItem="iOk-qv-v51" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="UgL-MM-eOh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GZZ-rB-BQW" secondAttribute="bottom" constant="100" id="mX7-OK-O4b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -50,6 +50,7 @@
                     <connections>
                         <outlet property="buttonTapMe" destination="GZZ-rB-BQW" id="1HL-Zi-5CS"/>
                         <outlet property="imageView" destination="iOk-qv-v51" id="3ac-pO-xbG"/>
+                        <segue destination="24o-dq-7ma" kind="show" identifier="showSecondScreen" id="oVL-Gt-VUZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -65,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cup" translatesAutoresizingMaskIntoConstraints="NO" id="lZO-Hh-AeB">
-                                <rect key="frame" x="57" y="144" width="300" height="300"/>
+                                <rect key="frame" x="57" y="94" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Zhc-7Y-sbB"/>
                                     <constraint firstAttribute="height" constant="300" id="dfK-yU-3Ge"/>
@@ -89,7 +90,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.61338656430000005" green="1" blue="0.66572800430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lZO-Hh-AeB" firstAttribute="top" secondItem="Uu5-Zj-iS9" secondAttribute="top" constant="100" id="a5n-YE-G4X"/>
+                            <constraint firstItem="lZO-Hh-AeB" firstAttribute="top" secondItem="Uu5-Zj-iS9" secondAttribute="top" constant="50" id="a5n-YE-G4X"/>
                             <constraint firstItem="Uu5-Zj-iS9" firstAttribute="bottom" secondItem="hgk-eW-kBt" secondAttribute="bottom" constant="100" id="atV-rw-6nO"/>
                             <constraint firstItem="lZO-Hh-AeB" firstAttribute="centerX" secondItem="JXX-cL-dkq" secondAttribute="centerX" id="eUC-rK-aTL"/>
                             <constraint firstItem="hgk-eW-kBt" firstAttribute="centerX" secondItem="JXX-cL-dkq" secondAttribute="centerX" id="g7h-YY-CZg"/>
