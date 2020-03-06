@@ -9,7 +9,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
     var gradientLayer: CAGradientLayer! {
         didSet {
             gradientLayer.startPoint = CGPoint(x: 1, y: 0)

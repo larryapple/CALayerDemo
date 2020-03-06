@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CAAnimationDelegate {
     
     var shapeLayer: CAShapeLayer! {
         didSet { /* Начальные настройки для нашего shapeLayer */
@@ -92,11 +92,27 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTapMeTapped(_ sender: UIButton) {
         
-        overShapeLayer.strokeEnd += 0.2
+//        overShapeLayer.strokeEnd += 0.2
+//
+//        if overShapeLayer.strokeEnd == 1 {
+//            performSegue(withIdentifier: "showSecondScreen", sender: self)
+//        }
         
-        if overShapeLayer.strokeEnd == 1 {
-            performSegue(withIdentifier: "showSecondScreen", sender: self)
-        }
+        let animation = CABasicAnimation(keyPath: "strokeEnd") /* Создаём анимацию */
+        animation.toValue = 1 /* Значение анимации по окончанию самой анимации */
+        animation.duration = 2 /* Длительность анимации */
+        
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        animation.fillMode = CAMediaTimingFillMode.both
+        animation.isRemovedOnCompletion = false
+        
+        animation.delegate = self
+        
+        overShapeLayer.add(animation, forKey: nil)
+    }
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        performSegue(withIdentifier: "showSecondScreen", sender: self)
     }
     
 }
